@@ -5,7 +5,7 @@ function Footer() {
         © {new Date().getFullYear()} Mangombo Obindock Agborenoh. All rights reserved.
       </p>
 
-      <p>Built with React & JavaScript.</p>
+      <p>Built by Keziah.</p>
     </footer>
   );
 }
