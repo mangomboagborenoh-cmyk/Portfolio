@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #090511;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(9, 5, 17, 0.9);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(170, 90, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #a855f7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #d5cce0;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b45cff;
+}
+
+.menu-button {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-button span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 5px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 120px 8% 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-greeting {
+  color: #b45cff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #a855f7;
+}
+
+.hero h2 {
+  color: #d6cce0;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  max-width: 580px;
+  color: #a9a0b4;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #a855f7;
+  color: white;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid #a855f7;
+  color: #c084fc;
+}
+
+.secondary-button:hover {
+  background: #a855f7;
+  color: white;
+}
+
+.hero-image {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #a855f7;
+  z-index: 2;
+}
+
+.image-glow {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #a855f7;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 100px 8%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading p {
+  color: #a855f7;
+  margin-bottom: 5px;
+}
+
+.section-heading h2 {
+  font-size: 2.8rem;
+}
+
+.section-heading h2 span {
+  color: #a855f7;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #aaa0b5;
+  margin-bottom: 20px;
+}
+
+.about-text .primary-button {
+  margin-top: 10px;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-card div {
+  padding: 30px 20px;
+  background: #120b1d;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.about-card strong {
+  display: block;
+  color: #c084fc;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.about-card span {
+  color: #9d93a8;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: #120b1d;
+  padding: 35px 20px;
+  text-align: center;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+}
+
+.skill-icon {
+  color: #c084fc;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  font-size: 1rem;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+  background: #0d0717;
+}
+
+.projects-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  background: #120b1d;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: 15px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #a855f7;
+}
+
+.project-number {
+  color: #a855f7;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  color: #a69caf;
+  margin-bottom: 20px;
+}
+
+.project-card small {
+  display: block;
+  color: #c084fc;
+  margin-bottom: 20px;
+}
+
+.project-card a {
+  color: white;
+}
+
+.project-card a:hover {
+  color: #c084fc;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-content {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-text > p {
+  color: #a9a0b4;
+  margin-bottom: 30px;
+}
+
+.contact-info p {
+  color: #c084fc;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #120b1d;
+  color: white;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 8px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a855f7;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  padding: 30px 8%;
+  text-align: center;
+  background: #06030b;
+  color: #81778b;
+  font-size: 0.85rem;
+}
+
+.footer p:first-child {
+  margin-bottom: 5px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: #0d0717;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero-image {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-image img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .image-glow {
+    width: 260px;
+    height: 260px;
+  }
+
+  .section {
+    padding: 80px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 2.2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+}
